@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import MySQLdb
 import os
 
-from darkflow.darkflow.net.build import TFNet
+from darkflow.net.build import TFNet
 
 # options and image read/cast credit https://github.com/markjay4k/YOLO-series/blob/master/part2%20-%20Processing%20Images%20with%20YOLO%20and%20openCV.ipynb
 
-class YoloController:
+class YoloService:
 
   def __init__(self, image_name):
     options = {
@@ -49,6 +49,3 @@ class YoloController:
     plt.savefig(new_image)
 
     return results
-
-YoloController = YoloController("Samplesetup1.jpg")
-YoloController.interpret_image()

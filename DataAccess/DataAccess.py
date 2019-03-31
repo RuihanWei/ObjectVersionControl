@@ -2,7 +2,9 @@
 import MySQLdb
 import mysql.connector
 
-#mysql+mysqlconnector://<user>:<password>@<host>[:<port>]/<dbname>
+
+# potential ORM
+# mysql+mysqlconnector://<user>:<password>@<host>[:<port>]/<dbname>
 
 # Base = declarative_base()
 #
@@ -12,16 +14,16 @@ import mysql.connector
 
 # cursor.execute("CREATE TABLE objects (id INT AUTO_INCREMENT PRIMARY KEY, label VARCHAR(255), confidence FLOAT)")
 
+class DataAccess:
 
-db = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  passwd="rienwave1",
-  database="ObjectVC"
-)
-
-cursor = db.cursor()
-
+  def __init__(self):
+    db = mysql.connector.connect(
+      host="localhost",
+      user="root",
+      passwd="rienwave1",
+      database="ObjectVC"
+    )
+    cursor = db.cursor()
 
 
 
@@ -29,20 +31,22 @@ cursor = db.cursor()
 # cursor.lastrowid   # gets id of last insert
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Reference SQL Commands     TODO: remove after databasehelper is completed
+
+# cursor.execute("CREATE TABLE relations (id INT AUTO_INCREMENT PRIMARY KEY, "
+#                "main_objects_id INT, "
+#                "relative_objects_id INT, "
+#                " clock_position INT, "
+#                "distance FLOAT, "
+#                "FOREIGN KEY (main_objects_id) REFERENCES objects(id), "
+#                "FOREIGN KEY (relative_objects_id) REFERENCES objects(id))")
+
+# cursor.execute("DROP TABLE relations")
+
+# cursor.execute("ALTER TABLE relations "
+# #                "ADD COLUMN _right FLOAT, "
+# #                "ADD COLUMN _left FLOAT "
+# #                ";")
 
 # cursor.execute("ALTER TABLE relations "
 # #                "ADD COLUMN _right FLOAT, "
