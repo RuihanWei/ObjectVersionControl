@@ -1,5 +1,5 @@
-from Services import YoloService as YoloService
-from Services import ImageService as ImageService
+import YoloService as YoloService
+from Models.ModelServices import ImageService as ImageService
 
 yoloService = YoloService.YoloService("Samplesetup1.jpg")
 Results = yoloService.interpret_image()

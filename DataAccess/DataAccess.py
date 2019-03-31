@@ -23,13 +23,20 @@ class DataAccess:
       passwd="rienwave1",
       database="ObjectVC"
     )
-    cursor = db.cursor()
+    self.cursor = db.cursor()
+
+  def InsertImage(self):
+
+    self.cursor.execute("INSERT INTO images ("
+                        "id, identifier, datetime)"
+                        " VALUES ()")
+
+
 
 
 
 
 # cursor.lastrowid   # gets id of last insert
-
 
 ### Reference SQL Commands     TODO: remove after databasehelper is completed
 
