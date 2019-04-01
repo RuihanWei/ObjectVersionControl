@@ -5,5 +5,5 @@ yoloService = YoloService.YoloService("Samplesetup1.jpg")
 Results = yoloService.interpret_image()
 
 imageService = ImageService.ImageService()
-imageService.CreateObjects(Results)
+imageService.CreateObjects(Results, "Samplesetup1.jpg")
 

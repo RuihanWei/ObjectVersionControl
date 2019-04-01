@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import MySQLdb
 import mysql.connector
+import datetime
 
 
 # potential ORM
@@ -14,27 +15,58 @@ import mysql.connector
 
 # cursor.execute("CREATE TABLE objects (id INT AUTO_INCREMENT PRIMARY KEY, label VARCHAR(255), confidence FLOAT)")
 
-class DataAccess:
+# todo: add Bleach
+# todo: further protection against injection
 
+class DataAccess:
   def __init__(self):
-    db = mysql.connector.connect(
+    self.db = mysql.connector.connect(
       host="localhost",
       user="root",
       passwd="rienwave1",
       database="ObjectVC"
     )
-    self.cursor = db.cursor()
+    self.cursor = self.db.cursor()
 
-  def InsertImage(self):
+  def InsertImage(self, identifier, currentTime):
+    # self.cursor.execute("DELETE FROM images WHERE id = 1")
 
-    self.cursor.execute("INSERT INTO images ("
-                        "id, identifier, datetime)"
-                        " VALUES ()")
+    current_time = currentTime.strftime("%Y-%m-%d %H:%M:%S")
+
+    sqlStr = "INSERT INTO images (identifier, datetime) VALUES (%s, %s)"
+    val = (identifier, current_time)
+    self.cursor.execute(sqlStr, val)
+    last_id = self.cursor.lastrowid
+    self.db.commit()
+    return last_id
+
+    # reverse
+    # birthday = datetime.strptime(str(birthday), "%Y-%m-%dT%H:%M:%S")
+
+  def InsertObject(self, image_id, label, confidence, reference_path):
+    sqlStr = "INSERT INTO objects (images_id, label, confidence, reference_path) VALUES (%s, %s, %s, %s)"
+    val = (image_id, label, confidence, reference_path)
+    self.cursor.execute(sqlStr, val)
+    last_id = self.cursor.lastrowid
+    self.db.commit()
+    return last_id
+
+    # def InsertBoundingBox(self, objects_id, midpoint):
+
+  def InsertBoundingBox(self, object_id, midpoint, length, width):
+    sqlStr = "INSERT INTO boundingboxes (objects_id, midpoint, length, width) VALUES (%s, %s, %s, %s)"
+    val = (object_id, midpoint, length, width)
+    self.cursor.execute(sqlStr, val)
+    self.db.commit()
 
 
+if __name__ == "__main__":
+  dataAccess = DataAccess()
+  # dataAccess.cursor.execute("DELETE FROM boundingboxes WHERE id = 3")
+  # dataAccess.db.commit()
 
-
-
+  # dataAccess.InsertBoundingBox(3, 20, 100, 100)
+  dataAccess.InsertObject(2, "cup", 0.6, "D:\\")
 
 # cursor.lastrowid   # gets id of last insert
 
