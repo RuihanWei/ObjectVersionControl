@@ -5,7 +5,6 @@ import Tools.Converters.DateTimeConverters as dateTimeConverters
 
 import datetime
 
-
 # potential ORM
 # mysql+mysqlconnector://<user>:<password>@<host>[:<port>]/<dbname>
 
@@ -54,20 +53,29 @@ class DataAccess:
 
     # def InsertBoundingBox(self, objects_id, midpoint):
 
-  def InsertBoundingBox(self, object_id, midpoint, length, width):
-    sqlStr = "INSERT INTO boundingboxes (objects_id, midpoint, length, width) VALUES (%s, %s, %s, %s)"
-    val = (object_id, midpoint, length, width)
+  def InsertBoundingBox(self, object_id, midpoint_x, midpoint_y, length, width):
+    sqlStr = "INSERT INTO boundingboxes (objects_id, midpoint_x, midpoint_y, length, width) VALUES (%s, %s, %s, %s, %s)"
+    val = (object_id, midpoint_x, midpoint_y, length, width)
     self.cursor.execute(sqlStr, val)
     self.db.commit()
 
+  # def FetchByDateTime(self, session_datetime):
+  #   sqlStr = "SELECT identifier,  boundingboxes (objects_id, midpoint, length, width) VALUES (%s, %s, %s, %s)"
+  #   images =
 
 if __name__ == "__main__":
   dataAccess = DataAccess()
-  # dataAccess.cursor.execute("DELETE FROM boundingboxes WHERE id = 3")
-  # dataAccess.db.commit()
+  dataAccess.cursor.execute("DELETE FROM objects; ")
+  #dataAccess.db.commit()
+
+  dataAccess = DataAccess()
+  dataAccess.cursor.execute("DELETE FROM images; ")
+  #dataAccess.db.commit()
+
+
 
   # dataAccess.InsertBoundingBox(3, 20, 100, 100)
-  dataAccess.InsertObject(2, "cup", 0.6, "D:\\")
+  # dataAccess.InsertObject(2, "cup", 0.6, "D:\\")
 
 # cursor.lastrowid   # gets id of last insert
 

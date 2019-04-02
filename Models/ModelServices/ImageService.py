@@ -8,16 +8,12 @@ class ImageService:
 
   def __init__(self, results, image_name):
     self.DataAccess = DataAccess.DataAccess()
-    self.Image = ImageScene.ImageScene()
-    self.ImageObjects = []
-    self.ObjectRelations = []
     self.Results = results
     self.Image_name = image_name
 
   def UpdateImage(self, identifier):
     current_time = datetime.datetime.now()
     image_id = self.DataAccess.InsertImage(identifier, current_time)
-    self.Image = ImageScene.ImageScene(identifier, current_time)
     return image_id
 
   def UpdateBoundingBoxes(self, object_id, result):
@@ -25,12 +21,12 @@ class ImageService:
     midpoint = ((result['bottomright']['x'] + result['topleft']['x']) / 2, (result['bottomright']['y'] + result['topleft']['y']) / 2)
     length = result['bottomright']['x'] - result['topleft']['x']
     width = result['bottomright']['y'] - result['topleft']['y']
-    self.DataAccess.InsertBoundingBox(object_id, midpoint, length, width)
+    self.DataAccess.InsertBoundingBox(object_id, float(midpoint[0]), float(midpoint[1]), float(length), float(width))
 
     # print(result['label'] + " confidence: " + str(result['confidence']))
 
   def UpdateGeneralObject(self, result, image_id, image_identifier):
-    image = Image.open(self.image_name)
+    image = Image.open(self.Image_name)
     cropBox = (result['topleft']['x'], result['topleft']['y'], result['bottomright']['x'], result['bottomright']['y'])
     crop = image.crop(cropBox)
     image_directory = os.getenv("LOCALAPPDATA") + "\\ObjectVersionControl\\" + image_identifier
@@ -40,7 +36,7 @@ class ImageService:
       os.makedirs(image_directory)
 
     crop.save(image_path, "PNG")
-    return self.DataAccess.InsertObject(image_id, result['label'], result['confidence'], image_path)
+    return self.DataAccess.InsertObject(image_id, result['label'], float(result['confidence']), image_path)
 
   def UpdateObjects(self, image_id, image_identifier, results):
     labels = []  # temp to remove duplicate labels
