@@ -14,7 +14,6 @@ class ImageService:
     self.Results = results
     self.Image_name = image_name
 
-
   def UpdateImage(self, identifier):
     current_time = datetime.datetime.now()
     image_id = self.DataAccess.InsertImage(identifier, current_time)

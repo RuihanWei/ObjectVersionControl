@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import MySQLdb
 import mysql.connector
+import Tools.Converters.DateTimeConverters as dateTimeConverters
+
 import datetime
 
 
@@ -30,8 +32,7 @@ class DataAccess:
 
   def InsertImage(self, identifier, currentTime):
     # self.cursor.execute("DELETE FROM images WHERE id = 1")
-
-    current_time = currentTime.strftime("%Y-%m-%d %H:%M:%S")
+    current_time = dateTimeConverters.pyDT_TO_MysqlDT(currentTime)
 
     sqlStr = "INSERT INTO images (identifier, datetime) VALUES (%s, %s)"
     val = (identifier, current_time)
