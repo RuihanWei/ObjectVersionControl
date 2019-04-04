@@ -7,9 +7,7 @@ import datetime
 
 # potential ORM
 # mysql+mysqlconnector://<user>:<password>@<host>[:<port>]/<dbname>
-
 # Base = declarative_base()
-#
 # app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:rienwave1@localhost/ObjectVC'
 # db = SQLAlchemy(app)
@@ -59,17 +57,24 @@ class DataAccess:
     self.cursor.execute(sqlStr, val)
     self.db.commit()
 
-  # def FetchByDateTime(self, session_datetime):
-  #   sqlStr = "SELECT identifier,  boundingboxes (objects_id, midpoint, length, width) VALUES (%s, %s, %s, %s)"
-  #   images =
+  def FetchByDateTime(self, session_datetime):
+    mysqlDateTime = dateTimeConverters.pyDT_TO_MysqlDT(session_datetime)
+
+    sqlStr = "SELECT SessionObjects.label, boundingboxes.midpoint_x, boundingboxes.midpoint_y FROM " \
+             "(SELECT objects.id, objects.label FROM (SELECT images.id FROM images WHERE images.datetime = %s) as ImageSession " \
+             "INNER JOIN objects ON objects.images_id = ImageSession.id) as SessionObjects " \
+             "INNER JOIN boundingboxes ON boundingboxes.objects_id = SessionObjects.id;;"
+
+    self.cursor.execute(sqlStr, (mysqlDateTime, ))
+    return self.cursor.fetchall()
 
 if __name__ == "__main__":
   dataAccess = DataAccess()
-  dataAccess.cursor.execute("DELETE FROM objects; ")
-  #dataAccess.db.commit()
+  # session_datetime = datetime.datetime(2019, 4, 1, 23, 58, 25)
+  # dataAccess.FetchByDateTime(session_datetime)
 
-  dataAccess = DataAccess()
-  dataAccess.cursor.execute("DELETE FROM images; ")
+
+  # dataAccess.cursor.execute("DELETE FROM images; ")
   #dataAccess.db.commit()
 
 

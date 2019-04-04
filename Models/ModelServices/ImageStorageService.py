@@ -1,10 +1,10 @@
-from DataAccess import DataAccess as DataAccess
+from Repository import DataAccess as DataAccess
 from PIL import Image
 import os
 import datetime
 from Models import ImageScene as ImageScene
 
-class ImageService:
+class ImageStorageService:
 
   def __init__(self, results, image_name):
     self.DataAccess = DataAccess.DataAccess()
