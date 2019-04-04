@@ -30,7 +30,7 @@ class RelationMapper:
       return 12
     elif 11*math.pi / 12 > radianAngle >= 3*math.pi / 4:
       return 10
-    elif 11*math.pi / 12 <= radianAngle and radianAngle < -11*math.pi / 12:
+    elif 11*math.pi / 12 <= radianAngle or radianAngle < -11*math.pi / 12:
       return 9
     elif -11*math.pi / 12 <= radianAngle < -3*math.pi / 4:
       return 8
