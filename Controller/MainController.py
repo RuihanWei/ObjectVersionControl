@@ -3,9 +3,9 @@ from Models.ModelServices import ImageStorageService as ImageStorageService
 from Models.ModelServices import RelationMapper as RelationMapper
 import datetime
 
-yoloService = YoloService.YoloService()
+# yoloService = YoloService.YoloService()
 # Results = yoloService.interpret_image("Samplesetup1.jpg")
-Results = yoloService.interpret_image("Samplesetup2.jpg")
+# Results = yoloService.interpret_image("Samplesetup2.jpg")
 
 # imageService = ImageService.ImageService(Results, "Samplesetup1.jpg")
 # imageService = ImageStorageService.ImageStorageService(Results, "Samplesetup2.jpg")
@@ -14,4 +14,5 @@ Results = yoloService.interpret_image("Samplesetup2.jpg")
 session1_datetime = datetime.datetime(2019, 4, 1, 23, 58, 25)
 session2_datetime = datetime.datetime(2019, 4, 3, 1, 26, 18)
 
-Relation1 = RelationMapper.RelationMapper.MapRelation(session1_datetime)
+Relation1 = RelationMapper.MapRelation(session1_datetime)
+Relation2 = RelationMapper.MapRelation(session2_datetime)
