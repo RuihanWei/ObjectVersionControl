@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0303ebc3-232b-4060-b807-05fdc0ac2232" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Controller/MainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/MainController.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/ModelServices/ComparisonService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/ModelServices/RelationMapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ModelServices/RelationMapper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,53 +14,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Models/ImageObject.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="240">
-                    <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
     <window id="1">
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/Models/ImageObject.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="90">
+                    <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/Models/ObjectRelations.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="120">
+                    <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Models/ModelServices/ImageStorageService.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="111">
+                  <state relative-caret-position="420">
                     <caret line="20" column="133" lean-forward="true" selection-start-line="20" selection-start-column="133" selection-end-line="20" selection-end-column="133" />
                     <folding>
                       <element signature="e#0#47#0" expanded="true" />
                       <marker date="1554278405065" expanded="true" signature="167:319" ph="..." />
                     </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Models/ObjectRelations.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="30">
-                    <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
                   </state>
                 </provider>
               </entry>
@@ -105,32 +91,33 @@
     <session id="-1080580518">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="36" />
-          <entry key="py" value="6564" />
+          <entry key="dummy" value="38" />
+          <entry key="py" value="7724" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="36" />
-          <entry key="Python" value="6564" />
+          <entry key="PLAIN_TEXT" value="38" />
+          <entry key="Python" value="7724" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="92" />
+          <entry key="py" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="92" />
+          <entry key="Python" value="101" />
         </counts>
       </usages-collector>
     </session>
@@ -140,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/MainController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="300">
+              <caret line="10" column="85" lean-forward="true" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -150,13 +137,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/ModelServices/ComparisonService.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
+              <folding>
+                <marker date="1554597982982" expanded="true" signature="47:48" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/ModelServices/RelationMapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="614">
+              <caret line="97" column="112" lean-forward="true" selection-start-line="97" selection-start-column="112" selection-end-line="97" selection-end-column="112" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
-                <marker date="1554359728688" expanded="true" signature="183:242" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1554588227656" expanded="true" signature="183:242" ph="..." />
               </folding>
             </state>
           </provider>
@@ -166,7 +165,7 @@
         <entry file="file://$PROJECT_DIR$/Models/ImageScene.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -174,7 +173,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Repository/DataAccess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1770">
+            <state relative-caret-position="1650">
               <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
               <folding>
                 <element signature="e#18#32#0" expanded="true" />
@@ -222,17 +221,19 @@
         <option value="$PROJECT_DIR$/Tools/Converters/DateTimeConverters.py" />
         <option value="$PROJECT_DIR$/Repository/DataAccess.py" />
         <option value="$PROJECT_DIR$/Models/ModelServices/ImageCreationService.py" />
-        <option value="$PROJECT_DIR$/Models/ModelServices/ImageStorageService.py" />
         <option value="$PROJECT_DIR$/Models/ImageObject.py" />
         <option value="$PROJECT_DIR$/Models/ObjectRelations.py" />
-        <option value="$PROJECT_DIR$/Controller/MainController.py" />
+        <option value="$PROJECT_DIR$/Models/ModelServices/RelationComparer.py" />
+        <option value="$PROJECT_DIR$/Models/ModelServices/ImageStorageService.py" />
         <option value="$PROJECT_DIR$/Models/ModelServices/RelationMapper.py" />
+        <option value="$PROJECT_DIR$/Controller/MainController.py" />
+        <option value="$PROJECT_DIR$/Models/ModelServices/ComparisonService.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="363" />
-    <option name="y" value="268" />
+    <option name="x" value="-1868" />
+    <option name="y" value="-21" />
     <option name="width" value="1680" />
     <option name="height" value="1029" />
   </component>
@@ -244,6 +245,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,35 +261,12 @@
             <path>
               <item name="ObjectVersionControl" type="b2602c69:ProjectViewProjectNode" />
               <item name="ObjectVersionControl" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObjectVersionControl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObjectVersionControl" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="ModelServices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObjectVersionControl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObjectVersionControl" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObjectVersionControl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObjectVersionControl" type="462c0819:PsiDirectoryNode" />
-              <item name="Tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ObjectVersionControl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ObjectVersionControl" type="462c0819:PsiDirectoryNode" />
-              <item name="Tools" type="462c0819:PsiDirectoryNode" />
-              <item name="Converters" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,7 +376,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="YoloService" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="RelationMapper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ObjectVersionControl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,11 +384,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/darkflow" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Models/ModelServices" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/darkflow/YoloService.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/ModelServices/RelationMapper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -420,18 +399,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.MainController (1)" />
-      <item itemvalue="Python.YoloService" />
       <item itemvalue="Python.DataAccess" />
       <item itemvalue="Python.ImageService" />
       <item itemvalue="Python.DataAccess (1)" />
+      <item itemvalue="Python.RelationMapper" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.MainController (1)" />
+        <item itemvalue="Python.RelationMapper" />
         <item itemvalue="Python.DataAccess (1)" />
         <item itemvalue="Python.DataAccess" />
         <item itemvalue="Python.ImageService" />
-        <item itemvalue="Python.YoloService" />
       </list>
     </recent_temporary>
   </component>
@@ -458,41 +437,41 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-7" width="2513" height="1455" extended-state="6" />
+    <frame x="-1866" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.115508884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.119825706" />
       <window_info id="Structure" order="1" sideWeight="0.5011287" side_tool="true" weight="0.11954766" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32980332" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6914378" visible="true" weight="0.20574887" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49878836" weight="0.27987897" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7370759" weight="0.33575884" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7815024" weight="0.26819128" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290469" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32848233" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32980332" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3085622" side_tool="true" visible="true" weight="0.20574887" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21849757" side_tool="true" weight="0.23827533" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.11954766" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.115508884" />
       <window_info id="Structure" order="1" sideWeight="0.5011287" side_tool="true" weight="0.11954766" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32980332" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32980332" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27987897" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7370759" weight="0.20574887" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7815024" visible="true" weight="0.23827533" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290469" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32980332" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21849757" side_tool="true" visible="true" weight="0.23827533" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -506,9 +485,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Controller/MainController.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/Models/ModelServices/RelationMapper.py</url>
+          <line>100</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -524,6 +503,15 @@
         <watch expression="singular_input_matrix.shape" language="Python" />
         <watch expression="result['confidence']" />
         <watch expression="float(result['confidence'])" language="Python" />
+        <watch expression="relations" />
+        <watch expression="orderedObjects" />
+        <watch expression="relations['cup']" />
+        <watch expression="relations['pottedplant']['keyboard'].Clock_direction" />
+        <watch expression="k" />
+        <watch expression="orderList[k][l]" />
+        <watch expression="orderList[11].__len__()" />
+        <watch expression="orderList[2]" />
+        <watch expression="orderList" />
       </configuration>
     </watches-manager>
   </component>
@@ -586,9 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="633">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -627,9 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
           <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,13 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="267" column="24" lean-forward="true" selection-start-line="267" selection-start-column="24" selection-end-line="267" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -675,9 +650,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tools/Converters/DateTimeConverters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/ModelServices/RelationComparer.py" />
+    <entry file="file://$PROJECT_DIR$/Models/ImageScene.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Repository/DataAccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+          <folding>
+            <element signature="e#18#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/ImageObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/ObjectRelations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="85" lean-forward="true" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Models/ModelServices/ImageStorageService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
+        <state relative-caret-position="420">
           <caret line="20" column="133" lean-forward="true" selection-start-line="20" selection-start-column="133" selection-end-line="20" selection-end-column="133" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
@@ -686,61 +717,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/ImageScene.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/ImageObject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/ObjectRelations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tools/Converters/DateTimeConverters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Repository/DataAccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
-          <folding>
-            <element signature="e#18#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/MainController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/ModelServices/RelationMapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="614">
+          <caret line="97" column="112" lean-forward="true" selection-start-line="97" selection-start-column="112" selection-end-line="97" selection-end-column="112" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <marker date="1554359728688" expanded="true" signature="183:242" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1554588227656" expanded="true" signature="183:242" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/ModelServices/ComparisonService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
+          <folding>
+            <marker date="1554597982982" expanded="true" signature="47:48" ph="..." />
           </folding>
         </state>
       </provider>
