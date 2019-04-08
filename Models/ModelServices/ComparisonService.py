@@ -6,10 +6,10 @@ def OrderObjects(object_1, object_2):
 
 
 def CompareObjects(objects_1, objects_2):
-  ComparisonResult = ""
+  ComparisonResult = []
   for object in objects_1:
     if not any(object2.Label == object.Label for object2 in objects_2):
-      ComparisonResult += ("%s was removed\n", object.Label)
+      ComparisonResult.append("%s was removed\n", object.Label)
   return ComparisonResult
 
 def NumberToOrdinal(number):
@@ -27,7 +27,7 @@ def NumberToOrdinal(number):
 
 
 def CompareRelations(relation_1, relation_2, objects_1, objects_2):
-  ComparisonResult = ""
+  ComparisonResult = []
   for i in range(0, len(objects_1)):
     for j in range(0, len(objects_1)):
       if objects_1[i].Label != objects_1[j].Label:
@@ -36,20 +36,19 @@ def CompareRelations(relation_1, relation_2, objects_1, objects_2):
           relation1 = relation_1[object1.Label][object2.Label]
           relation2 = relation_2[object1.Label][object2.Label]
           if relation1.Clock_direction != relation2.Clock_direction:
-            Comparison = ("Clock Direction from %s to %s used to be %s and is now %s\n" % (object1.Label,
-                                                                                                  object2.Label,
-                                                                                              relation1.Clock_direction,
+            Comparison = ("%s used to be %s o'clock from %s and is now %s" % (object2.Label, relation1.Clock_direction,
+                                                                                                  object1.Label,
                                                                                               relation2.Clock_direction))
             if Comparison not in ComparisonResult:
-              ComparisonResult += Comparison
+              ComparisonResult.append(Comparison)
 
           if relation1.Order != relation2.Order and relation1.Clock_direction == relation2.Clock_direction:
-            Comparison = ("%s used to be %s closes to %s and is now %s\n" % (object2.Label,
+            Comparison = ("%s used to be %s closes to %s and is now %s" % (object2.Label,
                                                                                     NumberToOrdinal(relation1.Order),
                                                                                     object1.Label,
                                                                                     NumberToOrdinal(relation2.Order)))
             if Comparison not in ComparisonResult:
-              ComparisonResult += Comparison
+              ComparisonResult.append(Comparison)
 
         except KeyError:
           pass
