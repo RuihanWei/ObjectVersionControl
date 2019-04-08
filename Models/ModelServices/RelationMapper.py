@@ -11,22 +11,18 @@ class Point:
     self.Y = y
 
 
-# large -> small
+# small -> large
 def InsertRelationInOrder(list_, newValue):
   for i in range(0, len(list_)):
-    if newValue.Distance > list_[i].Distance:
+    if newValue.Distance < list_[i].Distance:
       list_.insert(i, newValue)
-    elif i == len(list_) - 1:
+      return
+    if i == len(list_) - 1:
       list_.append(newValue)
+      return
+
   if len(list_) == 0:
     list_.append(newValue)
-
-
-# def CompareObjects(object_1, object_2):
-#   if object_1.Label > object_2.Label:
-#     return object_1, object_2
-#   else:
-#     return object_2, object_1
 
 def ClockDirection(point_1, point_2):
   # note y flipped from math coordinates
@@ -98,4 +94,4 @@ def MapRelation(session1_datetime):
                                                                                                        point_2))
 
   MapOrder(relations, objects)
-  return relations
+  return (relations, objects)
