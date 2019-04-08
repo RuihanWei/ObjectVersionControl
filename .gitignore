@@ -81,3 +81,9 @@ darkflow/darkflow/net/yolov2/__pycache__/train.cpython-37.pyc
 darkflow/darkflow/utils/__pycache__/__init__.cpython-37.pyc
 darkflow/darkflow/utils/__pycache__/box.cpython-37.pyc
 *.pyc
+.idea/modules.xml
+.idea/ObjectVersionControl.iml
+.idea/vcs.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+.idea/workspace.xml
