@@ -1,0 +1,24 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="static/styles/loginTemplate.css">
+
+<head>
+</head>
+
+<body>
+<div class="login-page">
+  <div class="form" >
+    <form class="login-form" action="{{url_for('login')}}" method="post">
+      <input name="username" type="text" placeholder="username"/>
+      <input name="password" type="password" placeholder="password"/>
+      <button  id="buttonLogin">login</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script type="text/javascript" src="static/LoginTemplate.js"> </script>
+
+</body>
+
+</html>
