@@ -87,3 +87,4 @@ darkflow/darkflow/utils/__pycache__/box.cpython-37.pyc
 .idea/inspectionProfiles/Project_Default.xml
 .idea/misc.xml
 .idea/workspace.xml
+venv/

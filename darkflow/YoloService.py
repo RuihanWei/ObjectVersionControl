@@ -5,15 +5,16 @@ import os
 # import os,sys,inspect
 # currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 # parentdir = os.path.dirname(currentdir)
-# sys.path.insert(0,parentdir)
+# sys.path.insert(0, parentdir)
 
-from darkflow.net.build import TFNet
+from darkflow.darkflow.net.build import TFNet
 
 # options and image read/cast credit https://github.com/markjay4k/YOLO-series/blob/master/part2%20-%20Processing%20Images%20with%20YOLO%20and%20openCV.ipynb
 
 class YoloService:
 
   def __init__(self):
+
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname)
@@ -59,4 +60,4 @@ class YoloService:
 
 if __name__ == '__main__':
   yoloService = YoloService()
-  yoloService.interpret_image("Samplesetup1.jpg")
+  yoloService.interpret_image("Samplesetup2.jpg")
