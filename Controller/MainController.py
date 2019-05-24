@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request, url_for, render_template
+from flask import Flask, request, url_for, render_template, jsonify
 import datetime
 
 from werkzeug.utils import redirect, secure_filename
@@ -10,6 +10,9 @@ class Session:
   def __init__(self, datetime, identifier):
     self.identifier = identifier
     self.datetime = datetime
+
+  def serialize(self):
+    return {self.identifier: self.datetime}
 
 
 template_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View/')
@@ -48,6 +51,20 @@ def selection():
   return render_template('/SelectionView.html', sessions=sessions, username=username)
 
 
+@app.route('/selection/api')
+def selectionapi():
+  # todo: retrieve from database
+  sessions = []
+  session1_datetime = datetime.datetime(2019, 4, 1, 23, 58, 25)
+  session2_datetime = datetime.datetime(2019, 4, 3, 1, 26, 18)
+  sessions.append(Session(str(session1_datetime), "desk area"))
+  sessions.append(Session(str(session2_datetime), "desk area"))
+  print(username)
+  json_result = jsonify([x.serialize() for x in sessions])
+  return json_result
+  # return jsonify({'12' : '34'})
+
+
 # @app.route('/diff')
 # def sessionRequest():
 #   session1_datetime = datetime.datetime(2019, 4, 1, 23, 58, 25)
@@ -63,6 +80,7 @@ def selection():
 @app.route('/upload')
 def upload_file():
   return render_template('/upload.html')
+
 
 @app.route('/uploader', methods=['GET', 'POST'])
 def uploader():
