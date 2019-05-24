@@ -5,6 +5,7 @@ import datetime
 
 from werkzeug.utils import redirect, secure_filename
 
+from Controller import ControllerTools
 
 class Session:
   def __init__(self, datetime, identifier):
@@ -19,6 +20,7 @@ template_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View
 static_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View/static/')
 app = Flask(__name__, template_folder=template_folder, static_url_path="/static", static_folder=static_folder)
 username = ""
+
 
 @app.route('/')
 @app.route('/login', methods=['GET', 'POST'])
@@ -65,16 +67,28 @@ def selectionapi():
   # return jsonify({'12' : '34'})
 
 
-# @app.route('/diff')
-# def sessionRequest():
-#   session1_datetime = datetime.datetime(2019, 4, 1, 23, 58, 25)
-#   session2_datetime = datetime.datetime(2019, 4, 3, 1, 26, 18)
-#   ComprisonList = ControllerTools.Diff(session1_datetime, session2_datetime)
-#   output = ''
-#   for comparison in ComprisonList:
-#     output += comparison
-#     output += '</br>'
-#   return output
+
+@app.route('/diff')
+def sessionRequest():
+  session1_datetime = datetime.datetime(2019, 4, 1, 23, 58, 25)
+  session2_datetime = datetime.datetime(2019, 4, 3, 1, 26, 18)
+  ComprisonList = ControllerTools.Diff(session1_datetime, session2_datetime)
+  output = ''
+  for comparison in ComprisonList:
+    output += comparison
+    output += '</br>'
+  return output
+
+@app.route('/diff/api')
+def sessionRequestAPI():
+  session1_datetime = datetime.datetime(2019, 4, 1, 23, 58, 25)
+  session2_datetime = datetime.datetime(2019, 4, 3, 1, 26, 18)
+  ComprisonList = ControllerTools.Diff(session1_datetime, session2_datetime)
+  jsonCompare = []
+  for i in range(0,len(ComprisonList)):
+    jsonCompare.append({"comparison " + str(i) : ComprisonList[i]})
+  return jsonify(jsonCompare)
+
 
 
 @app.route('/upload')

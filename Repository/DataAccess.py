@@ -1,5 +1,4 @@
 #!/usr/bin/python
-import MySQLdb
 import mysql.connector
 import Tools.Converters.DateTimeConverters as dateTimeConverters
 

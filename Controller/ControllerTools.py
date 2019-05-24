@@ -1,9 +1,13 @@
-import darkflow.YoloService as YoloService
+# import darkflow.YoloService as YoloService
 from Models.ModelServices import ImageStorageService as ImageStorageService
 from Models.ModelServices import RelationMapper as RelationMapper
 import datetime
 from Models.ModelServices.ComparisonService import CompareRelations
+import os
 
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
 
 # yoloService = YoloService.YoloService()
 # Results = yoloService.interpret_image("Samplesetup1.jpg")
