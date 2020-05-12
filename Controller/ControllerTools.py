@@ -1,4 +1,4 @@
-# import darkflow.YoloService as YoloService
+import YoloService
 from Models.ModelServices import ImageStorageService as ImageStorageService
 from Models.ModelServices import RelationMapper as RelationMapper
 import datetime

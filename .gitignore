@@ -8,7 +8,8 @@ darkflow/__pycache__/
 *.pyc
 
 # Weight files
-darkflow/bin/
+Controller/bin
+Controller/cfg
 
 # Annotated test results
 darkflow/results/
