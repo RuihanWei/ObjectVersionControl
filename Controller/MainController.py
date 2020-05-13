@@ -16,9 +16,9 @@ class Session:
     return {self.identifier: self.datetime}
 
 
-template_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View/')
+template_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View/templates')
 static_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View/static/')
-app = Flask(__name__, template_folder=template_folder, static_url_path="/static", static_folder=static_folder)
+app = Flask(__name__, template_folder=template_folder, static_url_path = '/'+static_folder,static_folder=static_folder)
 username = ""
 
 
