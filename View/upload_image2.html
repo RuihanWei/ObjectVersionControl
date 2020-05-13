@@ -1,0 +1,16 @@
+<html>
+   <body>
+      <form action = "http://localhost:5000/uploader1" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+      <img src= {{ url_for('static', filename = 'image1.jpg')}} height="200" width="300">
+      <form action = "http://localhost:5000/uploader2" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+      <img src= {{ url_for('static', filename = 'image2.jpg')}} height="200" width="300">
+   </body>
+</html>
