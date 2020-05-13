@@ -5,7 +5,7 @@ import datetime
 
 from werkzeug.utils import redirect, secure_filename
 
-from Controller import ControllerTools
+import ControllerTools
 
 class Session:
   def __init__(self, datetime, identifier):
@@ -16,9 +16,12 @@ class Session:
     return {self.identifier: self.datetime}
 
 
-template_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View/')
-static_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View/static/')
-app = Flask(__name__, template_folder=template_folder, static_url_path="/static", static_folder=static_folder)
+template_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View\\templates')
+static_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'View\\static')
+# template_folder = 'View\\templates'
+# static_folder = 'View\\static'
+app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+app.config['static_folder'] = static_folder
 username = ""
 
 
@@ -40,6 +43,9 @@ def login():
   # todo: incorporate error into HTML
   return render_template('/LoginTemplate.html', error=error)
 
+@app.route('/')
+def to_index():
+  return render_template("index.html", token="react-flask")
 
 @app.route('/selection')
 def selection():
@@ -88,7 +94,6 @@ def sessionRequestAPI():
   for i in range(0,len(ComprisonList)):
     jsonCompare.append({"comparison " + str(i) : ComprisonList[i]})
   return jsonify(jsonCompare)
-
 
 
 @app.route('/upload')

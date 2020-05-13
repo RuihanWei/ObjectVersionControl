@@ -1,5 +1,4 @@
 import YoloService
-from Models.ModelServices import ImageStorageService as ImageStorageService
 from Models.ModelServices import RelationMapper as RelationMapper
 import datetime
 from Models.ModelServices.ComparisonService import CompareRelations
